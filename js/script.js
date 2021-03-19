@@ -202,5 +202,31 @@ var toys = [
 	{
 		name: "Mr Potato Head",
 		price: 89.99,
-	},
+	}
 ];
+
+
+var buttonAnswer = document.querySelector (".price")
+var finalAnswer = document.querySelector ("#total")
+
+function answer() {
+	var totalPrice = 0
+
+	for (var i = 0; i < toys.length; i++){
+
+		var thing = toys[i];
+   	 	var toyPrice = toys[i].price;
+		toyPrice = parseFloat(toyPrice);
+		
+
+		if (!isNaN(toyPrice)){
+			totalPrice += toyPrice;
+
+		}
+	}
+	console.log(totalPrice)
+	finalAnswer.innerHTML = totalPrice;
+
+}
+
+buttonAnswer.onclick = answer
