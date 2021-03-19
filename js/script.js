@@ -158,10 +158,15 @@ function change() {
     document.title = "Updated title";
     body.style.backgroundColor = "yellow";
     heading.style.fontFamily = "impact";
-    heading.innerHTML = ("<a href = # >" + "Programming Foundations Course Assignement" + "</a>")
+    heading.innerHTML = ("<a href = >" + "Programming Foundations Course Assignement" + "</a>")
     heading.style.color = "green";
-    list.style.padding = " ";
-    body.style.removeProperty = ('padding');
+
+    //heading.childNodes[0].style.color = "green";
+    //heading.childNodes[0].style.textDecoration = "none";
+
+
+    list.style.padding = "0px";
+    list.style.listStyleType = "none";
 }
 
 // ???????????????
