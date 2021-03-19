@@ -152,7 +152,7 @@ id.innerHTML = sum;
 var buttonClick = document.querySelector (".page");
 var body = document.querySelector ("body");
 var heading = document.querySelector ("h1");
-var list = document.querySelector(".games");
+var list = document.querySelector("ul");
 
 function change() {
     document.title = "Updated title";
@@ -160,6 +160,8 @@ function change() {
     heading.style.fontFamily = "impact";
     heading.innerHTML = ("<a href = # >" + "Programming Foundations Course Assignement" + "</a>")
     heading.style.color = "green";
+    list.style.padding = " ";
+    body.style.removeProperty = ('padding');
 }
 
 // ???????????????
