@@ -13,9 +13,6 @@ else {
 
 // Question 2
 
-// Create a for loop that counts from 15 to 25. Console log the value of 
-// the counter variable inside the loop only if it's equal to 17 or 20.
-
 
 for (var i = 15; i <= 25; i++) {
     if (i === 17 || i === 20) {
@@ -24,10 +21,6 @@ for (var i = 15; i <= 25; i++) {
 }
 
 // Question 3
-
-// Loop through the array below and add an li item to 
-// the ul element in the HTML containing the title and rating of each 
-// game only if the rating for the game is below 3.5.
 
 // Here i made it so the rating of Null would not show up as under a 3.5 
 //rating. If i wanted it included i would just remove:  
@@ -73,17 +66,6 @@ for (var i =0; i < games.length; i++) {
 
 // Question 4
 
-// Create a function called whatIDontLike that accepts one argument. 
-// Choose a good name for the argument.
-
-// Inside the function, check if the argument has a string value. 
-// If it doesn't log the message "Please send in a string".
-
-// If the argument is a string value, log the message 
-// "I don't like " together with the argument.
-
-// Call the function and pass in a value of your choice.
-
 function whatIDontLike(animal){
     var typeOfThing = typeof animal;
 
@@ -102,21 +84,6 @@ console.log(result);
 
 // Question 5
 
-// Create a function that accepts two arguments.
-
-// Inside the function, try to convert the arguments to numbers.
-
-// If either of the arguments cannot be converted to a number, 
-// return the value: "Invalid argument(s)".
-
-// If both arguments are number values or can be converted to number values, 
-// subtract the second argument from the first and 
-// return the result from the function.
-
-// Call the function, pass in to two values and assign the return
-// value to be the innerHTML value of the element with the id subtraction.
-
-
 function subtr(number1, number2) {
     var convert1 = parseFloat(number1);
     var convert2 = parseFloat(number2);
@@ -129,25 +96,12 @@ function subtr(number1, number2) {
 
 var id = document.querySelector ("#subtraction");
 
-var sum = subtr("56", 8)
+var sum = subtr("56", 8);
 
 id.innerHTML = sum;
 
 
 // Question 6
-
-// Select the button with the class page.
-
-// When the button is clicked do the following:
-
-// Change the title of the page (the value of the title element in the head) 
-// to "Updated title".
-
-// Change the background colour of the whole page to "yellow".
-// Change the color of the h1 element to "green".
-// Change the h1 element's font to "impact".
-// Change the value of the h1 element to be a link.
-// Remove the list style and padding from the ul element.
 
 var buttonClick = document.querySelector (".page");
 var body = document.querySelector ("body");
@@ -155,27 +109,22 @@ var heading = document.querySelector ("h1");
 var list = document.querySelector("ul");
 
 function change() {
-    document.title = "Updated title";
-    body.style.backgroundColor = "yellow";
-    heading.style.fontFamily = "impact";
-    heading.innerHTML = ("<a href = >" + "Programming Foundations Course Assignement" + "</a>")
-    heading.style.color = "green";
+    document.title = "Updated title";			// Change the title of the page
+    body.style.backgroundColor = "yellow";		// Change the background colour of the whole page to "yellow".
+    heading.style.fontFamily = "impact"; 		// Change the h1 element's font to "impact".
+    heading.innerHTML = ("<a href = # >" + "Programming Foundations Course Assignement" + "</a>"); // Change the value of the h1 element to be a link.
+    heading.style.color = "green"; 				// Change the color of the h1 element to "green".
 
-    //heading.childNodes[0].style.color = "green";
-    //heading.childNodes[0].style.textDecoration = "none";
+    // Decided to comment out this code. It turns the link green and removes the line. it will still act as a link, but the text will stay green as the asignement asked:
+	//heading.childNodes[0].style.color = "green";
+    //heading.childNodes[0].style.textDecoration = "none"; 
 
-
-    list.style.padding = "0px";
+	list.style.padding = "0px"; 		// Remove the list style and padding from the ul element.
     list.style.listStyleType = "none";
+
 }
 
-// ???????????????
 buttonClick.onclick = change;
-
-
-
-
-
 
 
 
@@ -206,11 +155,11 @@ var toys = [
 ];
 
 
-var buttonAnswer = document.querySelector (".price")
-var finalAnswer = document.querySelector ("#total")
+var buttonAnswer = document.querySelector (".price");
+var finalAnswer = document.querySelector ("#total");
 
 function answer() {
-	var totalPrice = 0
+	var totalPrice = 0;
 
 	for (var i = 0; i < toys.length; i++){
 
@@ -229,4 +178,4 @@ function answer() {
 
 }
 
-buttonAnswer.onclick = answer
+buttonAnswer.onclick = answer;
